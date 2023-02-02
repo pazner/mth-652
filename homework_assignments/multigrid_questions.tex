@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\title{Multigrid Project}
+\date{}
+\maketitle
+
+\noindent
+\textbf{Reference:} Chapters 2 and 3 from ``A Multigrid Tutorial'' by Briggs and Henson.
+
+\section*{Written Questions}
+
+\begin{enumerate}
+   \item Briefly summarize (in one or two paragraphs) the main points of Chapters 2 and 3.
+   \item Write out the algorithm for a two-grid method.
+   \item Smoothers:
+   \begin{itemize}
+      \item Chapter 2, Question 9
+      \item Chapter 2, Question 10
+      \item Chapter 2, Question 14
+      \item Explain how the above answers relate to the concept of a smoother in a multigrid cycle.
+   \end{itemize}
+   \item Why would one use a (multilevel) V-cycle rather than a two-grid method? What are the relevant work estimates?
+   \item Explain how one can use multigrid as a \textbf{solver} (i.e.\ as an iterative method), and as a \textbf{preconditioner} (e.g.\ for a conjugate gradient iteration). What are the conditions on the multigrid cycle if you want to use it is a preconditioner for CG? How does this relate to the concept of a convergent smoother?
+   \item ``A Multigrid Tutorial'' presents multigrid as applied to finite difference discretizations. Explain how these concepts apply to finite elements. What is the mesh hierarchy? What are the restriction and prolongation operators? How do these operators connect the fine-grid and coarse-grid operators?
+\end{enumerate}
+
+\section*{Programming}
+
+\begin{itemize}
+   \item Create an MFEM example to solve the Poisson problem using geometric multigrid (start with example 26 --- there is both a C++ version and a Python version).
+   \item Compare convergence using Jacobi and (symmetric) Gauss-Seidel smoothers.
+   \item Emperically, how many iterations are required as the mesh refinement is increased?
+   \item How does the order of the method (polynomial degree) impact convergence?
+   \item How does anisotropy of the diffusion operator impact convergence? Do you have any ideas to improve convergence for anisotropic problems?
+   \item Compare geometric multigrid to algebraic multigrid (HypreBoomerAMG). What are the pros and cons of each method?
+\end{itemize}
+
+\end{document}
