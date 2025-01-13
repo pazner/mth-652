@@ -1,3 +1,4 @@
 lectures/lecture_*.tex
 lectures/lecture.cls
 lectures/build
+lectures/makefile
