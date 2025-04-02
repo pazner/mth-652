@@ -2,7 +2,7 @@
 ## Advanced Numerical Analysis
 ### Winter 2025, Portland State University
 
-### Notes Notes
+### Lecture Notes
 
 * [Lecture 1](lectures/pdf/lecture_1.pdf)
    - Parabolic and time-dependent problems
